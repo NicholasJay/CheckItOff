@@ -1,0 +1,14 @@
+<h1>Make a Checklist</h1>
+<fieldset><legend>Checklist</legend>
+<form id="list">
+  <input type="text" />
+  <button>Add Checklist Item</button>
+</form>
+</fieldset>
+
+<ul>
+  <% @allinfo.each do |item| %>
+  <li><%= item.tasks %><input type="checkbox", val= 'checked'><%= item.id %></li>
+  <% end %>
+</ul>
+

@@ -1,3 +1,6 @@
 CheckItOff::Application.routes.draw do
-  root "checklists#index"
+
+  resources :checklist, only:[:create, :update, :destroy]
+  root "checklist#index"
+  
 end
