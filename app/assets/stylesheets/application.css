@@ -11,6 +11,53 @@
  *= require_self
  *= require_tree .
  */
+
 .strike {
   text-decoration: line-through;
 }
+
+img {
+  max-height: 100px;
+}
+
+body {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Cantarell', sans-serif;
+}
+
+ul {
+  margin: 0 auto;
+  text-align: center;
+  list-style-type: none;
+  width: 375px;
+  padding: 10px;
+  border: 2px solid grey;
+}
+
+ul li{
+  border: 1px solid grey;
+  text-align: right;
+  font-size: 20px;
+}
+
+ul li:nth-child(odd){
+  background: lightgrey;
+}
+
+form {
+  margin: 0 auto;
+  background: grey;
+  text-align: center;
+  width: 400px;
+}
+
+fieldset {
+  padding: 15px;
+}
+
+
+

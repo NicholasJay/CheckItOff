@@ -1,19 +1,24 @@
 <h1>Make a Checklist</h1>
-<fieldset><legend>Checklist</legend>
+<img src="http://www.clker.com/cliparts/f/4/e/b/13276241461086975058grey%20check%20mark-md.png" />
+
+
 <form id="list">
+<fieldset>
   <input type="text" />
   <button>Add Checklist Item</button>
-</form>
 </fieldset>
+</form>
+
+
 
 <ul>
   <% @allinfo.each do |item| %>
   <% if item.is_checked == true %>
   <li class="strike"><%= item.tasks %>
-  <input type="checkbox", checked="checked", id="<%= item.id %>"></li>
+  <input type="checkbox", checked="checked", id="<%= item.id %>"><%=link_to("X", "/checklist/#{item.id}", method: :delete)%></li>
   <% else %>
   <li><%= item.tasks %>
-  <input type="checkbox", id="<%= item.id %>"></li>
+  <input type="checkbox", id="<%= item.id %>"><%=link_to("X", "/checklist/#{item.id}", method: :delete)%></li>
   <% end %>
   <% end %>
 </ul>

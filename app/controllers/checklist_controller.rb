@@ -17,6 +17,9 @@ class ChecklistController < ApplicationController
   end
 
   def destroy
+    @task = Checklist.find(params[:id])
+    @task.destroy
+    redirect_to ("/")
   end
 
 end
