@@ -11,3 +11,6 @@
  *= require_self
  *= require_tree .
  */
+.strike {
+  text-decoration: line-through;
+}

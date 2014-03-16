@@ -23,23 +23,23 @@ function strike(e){
   if (this.checked === true){
     $(this.parentElement).css("text-decoration", "line-through");
     $.ajax({
-    url: '/checklist/' + number,
-    data: {is_checked: "true"},
-    type: 'PATCH',
-    success: function(result) {
+      url: '/checklist/' + number,
+      data: {is_checked: "true"},
+      type: 'PATCH',
+      success: function(result) {
        alert("checklist changed!");
-    }
-});
+     }
+   });
   } else {
     $(this.parentElement).css("text-decoration", "none");
-        $.ajax({
-    url: '/checklist/' + number,
-    data: {is_checked: "false"},
-    type: 'PATCH',
-    success: function(result) {
+    $.ajax({
+      url: '/checklist/' + number,
+      data: {is_checked: "false"},
+      type: 'PATCH',
+      success: function(result) {
        alert("checklist changed!");
-    }
-});
+     }
+   });
   }
 }
 
