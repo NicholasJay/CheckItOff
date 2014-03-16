@@ -10,8 +10,6 @@ class ChecklistController < ApplicationController
   end
 
   def update
-
-    binding.pry
     @task = Checklist.find(params[:id])
     @task.update(is_checked: params[:is_checked])
     @task.save

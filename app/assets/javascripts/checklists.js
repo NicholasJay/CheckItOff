@@ -22,9 +22,31 @@ function strike(e){
   var number = this.id;
   if (this.checked === true){
     $(this.parentElement).css("text-decoration", "line-through");
-    $.post("/checklist/", {is_checked: "true", id: number});
+    $.ajax({
+    url: '/checklist/' + number,
+    data: {is_checked: "true"},
+    type: 'PATCH',
+    success: function(result) {
+       alert("checklist changed!");
+    }
+});
   } else {
     $(this.parentElement).css("text-decoration", "none");
-    $.post('/checklist/', {is_checked: "false", id: number});
+        $.ajax({
+    url: '/checklist/' + number,
+    data: {is_checked: "false"},
+    type: 'PATCH',
+    success: function(result) {
+       alert("checklist changed!");
+    }
+});
   }
 }
+
+
+// data = { id: this.id, _method: 'delete' };
+// url = '/checklist/'
+// request = $.post(url, data);
+// request.done(function(res){
+//   alert('Your list item has been deleted')
+// });
