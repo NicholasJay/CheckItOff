@@ -55,6 +55,14 @@ form {
   width: 400px;
 }
 
+a {
+  color: blue;
+  text-decoration: none;
+}
+span {
+  color: blue;
+}
+
 fieldset {
   padding: 15px;
 }
